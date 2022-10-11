@@ -9,7 +9,7 @@
     <artifactId>connectionfactory</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
+<properties>
         <!--jdk.version>1.8</jdk.version-->
         <scala.compat.version>2.12</scala.compat.version>
         <scala.version>${scala.compat.version}.10</scala.version>
@@ -112,25 +112,24 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${scala.compat.version}</artifactId>
             <version>${spark.version}</version>
-            <scope>provided</scope>
+<!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${scala.compat.version}</artifactId>
             <version>${spark.version}</version>
-            <scope>provided</scope>
+<!--            <scope>provided</scope>-->
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-avro -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-avro_2.11</artifactId>
-            <version>2.4.3</version>
+            <artifactId>spark-avro_2.12</artifactId>
+            <version>${spark.version}</version>
         </dependency>
-
-
-
-
+        <dependency>
+            <groupId>com.databricks</groupId>
+            <artifactId>spark-xml_2.12</artifactId>
+            <version>0.15.0</version>
+        </dependency>
 
         <!--dependency>
             <groupId>org.apache.spark</groupId>
