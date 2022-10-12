@@ -4,13 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- TODO: Change this to your organization and artifactId -->
     <groupId>com.epam.connectionfactory</groupId>
     <artifactId>connectionfactory</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-<properties>
-        <!--jdk.version>1.8</jdk.version-->
+    <properties>
         <scala.compat.version>2.12</scala.compat.version>
         <scala.version>${scala.compat.version}.10</scala.version>
         <spark.version>3.3.0</spark.version>
@@ -23,19 +21,10 @@
         <sourceDirectory>src/main/scala</sourceDirectory>
         <testSourceDirectory>src/test/scala</testSourceDirectory>
         <plugins>
-            <!--plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                </configuration>
-            </plugin-->
             <plugin>
-                <!-- Enable the scala maven plugin, see https://github.com/davidB/scala-maven-plugin for more info -->
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.3.1</version>
+                <version>4.7.2</version>
                 <executions>
                     <execution>
                         <goals>
@@ -80,6 +69,11 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.epam.connectionfactory.PointToRun.class</mainClass>
+                        </manifest>
+                    </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
@@ -95,8 +89,6 @@
                 </executions>
             </plugin>
         </plugins>
-
-
     </build>
 
     <dependencies>
@@ -112,13 +104,49 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${scala.compat.version}</artifactId>
             <version>${spark.version}</version>
-<!--            <scope>provided</scope>-->
+            <!--<scope>provided</scope>-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jul-to-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jcl-over-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-1.2-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${scala.compat.version}</artifactId>
             <version>${spark.version}</version>
-<!--            <scope>provided</scope>-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
@@ -131,23 +159,25 @@
             <version>0.15.0</version>
         </dependency>
 
-        <!--dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_${scala.compat.version}</artifactId>
-            <version>${spark.version}</version>
-        </dependency-->
         <!-- Streaming dependencies -->
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql-kafka-0-10_${scala.compat.version}</artifactId>
             <version>${spark.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-        <!-- OPTIONAL: HBase dependency (only used if you want to read from HBase) -->
+        <!-- Logging -->
         <dependency>
-            <groupId>org.apache.hbase</groupId>
-            <artifactId>hbase-client</artifactId>
-            <version>2.2.3</version>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.19.0</version>
         </dependency>
+
         <!-- Test dependencies -->
         <dependency>
             <groupId>org.scalatest</groupId>
@@ -159,12 +189,6 @@
             <groupId>org.scalamock</groupId>
             <artifactId>scalamock_${scala.compat.version}</artifactId>
             <version>4.0.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.holdenkarau</groupId>
-            <artifactId>spark-testing-base_${scala.compat.version}</artifactId>
-            <version>2.4.5_0.14.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
