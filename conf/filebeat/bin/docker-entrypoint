@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+# Run filebeat
+if [[ "$1" == "" ]]; then
+     exec filebeat -e -c config/filebeat.yml
+else
+    # In case of any arguments were provided allow user to run arbitrarily commands like bash
+    exec "$@"
+fi
+
+#!/bin/bash

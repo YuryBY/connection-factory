@@ -4,6 +4,8 @@ import com.databricks.spark.xml.XmlDataFrameReader
 import org.apache.spark.sql.SparkSession
 import org.slf4j.{Logger, LoggerFactory}
 
+import java.util.Calendar
+
 /**
  * @author ${user.name}
  */
@@ -28,6 +30,16 @@ object PointToRun {
     df.printSchema()
 
     df.show(1, false)
+
+    1 to 100 foreach { _ =>
+      val now = Calendar.getInstance()
+      val currentHour = now.get(Calendar.HOUR)
+      val currentMinute = now.get(Calendar.MINUTE)
+      val currentSecond = now.get(Calendar.SECOND)
+      log.info(s"Current time - $currentHour:$currentMinute:$currentSecond")
+      Thread.sleep(100000) // wait for 100000 millisecond
+    }
+
   }
 
 }
