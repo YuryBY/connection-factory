@@ -1,0 +1,3 @@
+# Spark-submit run example:
+
+/spark/bin/spark-submit --class PATH_TO_MAIN_CLASS --master spark://MASTER_IP:7077 --deploy-mode=cluster --conf spark.driver.extraJavaOptions="-Dlog4j.configurationFile=log4j2-driver.properties" --conf spark.executor.extraJavaOptions="-Dlog4j.configurationFile=log4j2-workers.properties" --conf spark.eventLog.enabled=true --conf spark.eventLog.dir=/tmp/spark-events --conf Dspark.worker.cleanup.enabled=false --executor-memory 2G --total-executor-cores 2 ../shared_disk/connectionfactory-1.0-SNAPSHOT-jar-with-dependencies.jar /shared_disk/input_file.xml 1000
