@@ -1,0 +1,212 @@
+2022-10-12 18:54:27 INFO  SparkContext - Running Spark version 3.3.0
+ 2022-10-12 18:54:27 WARN  NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ 2022-10-12 18:54:27 INFO  ResourceUtils - ==============================================================
+ 2022-10-12 18:54:27 INFO  ResourceUtils - No custom resources configured for spark.driver.
+ 2022-10-12 18:54:27 INFO  ResourceUtils - ==============================================================
+ 2022-10-12 18:54:27 INFO  SparkContext - Submitted application: Connection-Factory-2.0
+ 2022-10-12 18:54:27 INFO  ResourceProfile - Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+ 2022-10-12 18:54:27 INFO  ResourceProfile - Limiting resource is cpu
+ 2022-10-12 18:54:27 INFO  ResourceProfileManager - Added ResourceProfile id: 0
+ 2022-10-12 18:54:27 INFO  SecurityManager - Changing view acls to: Yury_Bakhmutski
+ 2022-10-12 18:54:27 INFO  SecurityManager - Changing modify acls to: Yury_Bakhmutski
+ 2022-10-12 18:54:27 INFO  SecurityManager - Changing view acls groups to: 
+ 2022-10-12 18:54:27 INFO  SecurityManager - Changing modify acls groups to: 
+ 2022-10-12 18:54:27 INFO  SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Yury_Bakhmutski); groups with view permissions: Set(); users  with modify permissions: Set(Yury_Bakhmutski); groups with modify permissions: Set()
+ 2022-10-12 18:54:28 INFO  Utils - Successfully started service 'sparkDriver' on port 50075.
+ 2022-10-12 18:54:28 INFO  SparkEnv - Registering MapOutputTracker
+ 2022-10-12 18:54:28 INFO  SparkEnv - Registering BlockManagerMaster
+ 2022-10-12 18:54:28 INFO  BlockManagerMasterEndpoint - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+ 2022-10-12 18:54:28 INFO  BlockManagerMasterEndpoint - BlockManagerMasterEndpoint up
+ 2022-10-12 18:54:28 INFO  SparkEnv - Registering BlockManagerMasterHeartbeat
+ 2022-10-12 18:54:28 INFO  DiskBlockManager - Created local directory at C:\Users\Yury_Bakhmutski\AppData\Local\Temp\blockmgr-07bd81db-bf1c-4c7a-9718-483878d0d556
+ 2022-10-12 18:54:28 INFO  MemoryStore - MemoryStore started with capacity 4.0 GiB
+ 2022-10-12 18:54:28 INFO  SparkEnv - Registering OutputCommitCoordinator
+ 2022-10-12 18:54:28 WARN  Utils - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+ 2022-10-12 18:54:28 INFO  Utils - Successfully started service 'SparkUI' on port 4041.
+ 2022-10-12 18:54:28 INFO  Executor - Starting executor ID driver on host host.docker.internal
+ 2022-10-12 18:54:28 INFO  Executor - Starting executor with user classpath (userClassPathFirst = false): ''
+ 2022-10-12 18:54:28 INFO  Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 50094.
+ 2022-10-12 18:54:28 INFO  NettyBlockTransferService - Server created on host.docker.internal:50094
+ 2022-10-12 18:54:28 INFO  BlockManager - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+ 2022-10-12 18:54:28 INFO  BlockManagerMaster - Registering BlockManager BlockManagerId(driver, host.docker.internal, 50094, None)
+ 2022-10-12 18:54:28 INFO  BlockManagerMasterEndpoint - Registering block manager host.docker.internal:50094 with 4.0 GiB RAM, BlockManagerId(driver, host.docker.internal, 50094, None)
+ 2022-10-12 18:54:28 INFO  BlockManagerMaster - Registered BlockManager BlockManagerId(driver, host.docker.internal, 50094, None)
+ 2022-10-12 18:54:28 INFO  BlockManager - Initialized BlockManager: BlockManagerId(driver, host.docker.internal, 50094, None)
+ 2022-10-12 18:54:29 INFO  PointToRun$ - xml file path: file:/C:/_w/connection-factory/target/classes/input_file.xml
+ 2022-10-12 18:54:29 INFO  SharedState - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+ 2022-10-12 18:54:29 INFO  SharedState - Warehouse path is 'file:/C:/_w/connection-factory/spark-warehouse'.
+ 2022-10-12 18:54:30 INFO  MemoryStore - Block broadcast_0 stored as values in memory (estimated size 344.8 KiB, free 4.0 GiB)
+ 2022-10-12 18:54:30 INFO  MemoryStore - Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.6 KiB, free 4.0 GiB)
+ 2022-10-12 18:54:30 INFO  BlockManagerInfo - Added broadcast_0_piece0 in memory on host.docker.internal:50094 (size: 32.6 KiB, free: 4.0 GiB)
+ 2022-10-12 18:54:30 INFO  SparkContext - Created broadcast 0 from newAPIHadoopFile at XmlFile.scala:52
+ 2022-10-12 18:54:30 INFO  FileInputFormat - Total input files to process : 1
+ 2022-10-12 18:54:30 INFO  SparkContext - Starting job: fold at InferSchema.scala:95
+ 2022-10-12 18:54:30 INFO  DAGScheduler - Got job 0 (fold at InferSchema.scala:95) with 1 output partitions
+ 2022-10-12 18:54:30 INFO  DAGScheduler - Final stage: ResultStage 0 (fold at InferSchema.scala:95)
+ 2022-10-12 18:54:30 INFO  DAGScheduler - Parents of final stage: List()
+ 2022-10-12 18:54:30 INFO  DAGScheduler - Missing parents: List()
+ 2022-10-12 18:54:30 INFO  DAGScheduler - Submitting ResultStage 0 (MapPartitionsRDD[2] at mapPartitions at InferSchema.scala:76), which has no missing parents
+ 2022-10-12 18:54:30 INFO  MemoryStore - Block broadcast_1 stored as values in memory (estimated size 6.4 KiB, free 4.0 GiB)
+ 2022-10-12 18:54:30 INFO  MemoryStore - Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 4.0 GiB)
+ 2022-10-12 18:54:30 INFO  BlockManagerInfo - Added broadcast_1_piece0 in memory on host.docker.internal:50094 (size: 3.5 KiB, free: 4.0 GiB)
+ 2022-10-12 18:54:30 INFO  SparkContext - Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+ 2022-10-12 18:54:30 INFO  DAGScheduler - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at mapPartitions at InferSchema.scala:76) (first 15 tasks are for partitions Vector(0))
+ 2022-10-12 18:54:30 INFO  TaskSchedulerImpl - Adding task set 0.0 with 1 tasks resource profile 0
+ 2022-10-12 18:54:30 INFO  TaskSetManager - Starting task 0.0 in stage 0.0 (TID 0) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4571 bytes) taskResourceAssignments Map()
+ 2022-10-12 18:54:30 INFO  Executor - Running task 0.0 in stage 0.0 (TID 0)
+ 2022-10-12 18:54:30 INFO  NewHadoopRDD - Input split: file:/C:/_w/connection-factory/target/classes/input_file.xml:0+550
+ 2022-10-12 18:54:30 INFO  Executor - Finished task 0.0 in stage 0.0 (TID 0). 2096 bytes result sent to driver
+ 2022-10-12 18:54:30 INFO  TaskSetManager - Finished task 0.0 in stage 0.0 (TID 0) in 327 ms on host.docker.internal (executor driver) (1/1)
+ 2022-10-12 18:54:30 INFO  TaskSchedulerImpl - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+ 2022-10-12 18:54:30 INFO  DAGScheduler - ResultStage 0 (fold at InferSchema.scala:95) finished in 0.412 s
+ 2022-10-12 18:54:30 INFO  DAGScheduler - Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+ 2022-10-12 18:54:30 INFO  TaskSchedulerImpl - Killing all running tasks in stage 0: Stage finished
+ 2022-10-12 18:54:30 INFO  DAGScheduler - Job 0 finished: fold at InferSchema.scala:95, took 0.466185 s
+ 2022-10-12 18:54:32 INFO  BlockManagerInfo - Removed broadcast_1_piece0 on host.docker.internal:50094 in memory (size: 3.5 KiB, free: 4.0 GiB)
+ 2022-10-12 18:54:32 INFO  BlockManagerInfo - Removed broadcast_0_piece0 on host.docker.internal:50094 in memory (size: 32.6 KiB, free: 4.0 GiB)
+ 2022-10-12 18:54:32 INFO  MemoryStore - Block broadcast_2 stored as values in memory (estimated size 344.8 KiB, free 4.0 GiB)
+ 2022-10-12 18:54:32 INFO  MemoryStore - Block broadcast_2_piece0 stored as bytes in memory (estimated size 32.6 KiB, free 4.0 GiB)
+ 2022-10-12 18:54:32 INFO  BlockManagerInfo - Added broadcast_2_piece0 in memory on host.docker.internal:50094 (size: 32.6 KiB, free: 4.0 GiB)
+ 2022-10-12 18:54:32 INFO  SparkContext - Created broadcast 2 from newAPIHadoopFile at XmlFile.scala:52
+ 2022-10-12 18:54:33 INFO  CodeGenerator - Code generated in 193.8096 ms
+ 2022-10-12 18:54:33 INFO  FileInputFormat - Total input files to process : 1
+ 2022-10-12 18:54:33 INFO  SparkContext - Starting job: show at PointToRun.scala:30
+ 2022-10-12 18:54:33 INFO  DAGScheduler - Got job 1 (show at PointToRun.scala:30) with 1 output partitions
+ 2022-10-12 18:54:33 INFO  DAGScheduler - Final stage: ResultStage 1 (show at PointToRun.scala:30)
+ 2022-10-12 18:54:33 INFO  DAGScheduler - Parents of final stage: List()
+ 2022-10-12 18:54:33 INFO  DAGScheduler - Missing parents: List()
+ 2022-10-12 18:54:33 INFO  DAGScheduler - Submitting ResultStage 1 (MapPartitionsRDD[8] at show at PointToRun.scala:30), which has no missing parents
+ 2022-10-12 18:54:33 INFO  MemoryStore - Block broadcast_3 stored as values in memory (estimated size 37.4 KiB, free 4.0 GiB)
+ 2022-10-12 18:54:33 INFO  MemoryStore - Block broadcast_3_piece0 stored as bytes in memory (estimated size 14.7 KiB, free 4.0 GiB)
+ 2022-10-12 18:54:33 INFO  BlockManagerInfo - Added broadcast_3_piece0 in memory on host.docker.internal:50094 (size: 14.7 KiB, free: 4.0 GiB)
+ 2022-10-12 18:54:33 INFO  SparkContext - Created broadcast 3 from broadcast at DAGScheduler.scala:1513
+ 2022-10-12 18:54:33 INFO  DAGScheduler - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at show at PointToRun.scala:30) (first 15 tasks are for partitions Vector(0))
+ 2022-10-12 18:54:33 INFO  TaskSchedulerImpl - Adding task set 1.0 with 1 tasks resource profile 0
+ 2022-10-12 18:54:33 INFO  TaskSetManager - Starting task 0.0 in stage 1.0 (TID 1) (host.docker.internal, executor driver, partition 0, PROCESS_LOCAL, 4571 bytes) taskResourceAssignments Map()
+ 2022-10-12 18:54:33 INFO  Executor - Running task 0.0 in stage 1.0 (TID 1)
+ 2022-10-12 18:54:33 INFO  NewHadoopRDD - Input split: file:/C:/_w/connection-factory/target/classes/input_file.xml:0+550
+ 2022-10-12 18:54:33 INFO  CodeGenerator - Code generated in 64.1062 ms
+ 2022-10-12 18:54:33 INFO  Executor - Finished task 0.0 in stage 1.0 (TID 1). 1644 bytes result sent to driver
+ 2022-10-12 18:54:33 INFO  TaskSetManager - Finished task 0.0 in stage 1.0 (TID 1) in 237 ms on host.docker.internal (executor driver) (1/1)
+ 2022-10-12 18:54:33 INFO  TaskSchedulerImpl - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+ 2022-10-12 18:54:33 INFO  DAGScheduler - ResultStage 1 (show at PointToRun.scala:30) finished in 0.247 s
+ 2022-10-12 18:54:33 INFO  DAGScheduler - Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+ 2022-10-12 18:54:33 INFO  TaskSchedulerImpl - Killing all running tasks in stage 1: Stage finished
+ 2022-10-12 18:54:33 INFO  DAGScheduler - Job 1 finished: show at PointToRun.scala:30, took 0.251736 s
+ 2022-10-12 18:54:33 INFO  CodeGenerator - Code generated in 8.2944 ms
+ 2022-10-12 18:54:33 INFO  SparkContext - Invoking stop() from shutdown hook
+ 2022-10-12 18:54:33 INFO  SparkUI - Stopped Spark web UI at http://host.docker.internal:4041
+ 2022-10-12 18:54:33 INFO  MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+ 2022-10-12 18:54:33 INFO  MemoryStore - MemoryStore cleared
+ 2022-10-12 18:54:33 INFO  BlockManager - BlockManager stopped
+ 2022-10-12 18:54:33 INFO  BlockManagerMaster - BlockManagerMaster stopped
+ 2022-10-12 18:54:33 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+ 2022-10-12 18:54:33 INFO  SparkContext - Successfully stopped SparkContext
+ 2022-10-12 18:54:33 INFO  ShutdownHookManager - Shutdown hook called
+ 2022-10-12 18:54:33 INFO  ShutdownHookManager - Deleting directory C:\Users\Yury_Bakhmutski\AppData\Local\Temp\spark-a8d842e6-f166-47ec-a542-23b0c0da0bb5
+ 2022-10-13 12:57:57 INFO  SparkContext - Running Spark version 3.3.0
+ 2022-10-13 12:57:57 WARN  NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+ 2022-10-13 12:57:58 INFO  ResourceUtils - ==============================================================
+ 2022-10-13 12:57:58 INFO  ResourceUtils - No custom resources configured for spark.driver.
+ 2022-10-13 12:57:58 INFO  ResourceUtils - ==============================================================
+ 2022-10-13 12:57:58 INFO  SparkContext - Submitted application: Connection-Factory-2.0
+ 2022-10-13 12:57:58 INFO  ResourceProfile - Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+ 2022-10-13 12:57:58 INFO  ResourceProfile - Limiting resource is cpu
+ 2022-10-13 12:57:58 INFO  ResourceProfileManager - Added ResourceProfile id: 0
+ 2022-10-13 12:57:58 INFO  SecurityManager - Changing view acls to: Yury_Bakhmutski
+ 2022-10-13 12:57:58 INFO  SecurityManager - Changing modify acls to: Yury_Bakhmutski
+ 2022-10-13 12:57:58 INFO  SecurityManager - Changing view acls groups to: 
+ 2022-10-13 12:57:58 INFO  SecurityManager - Changing modify acls groups to: 
+ 2022-10-13 12:57:58 INFO  SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(Yury_Bakhmutski); groups with view permissions: Set(); users  with modify permissions: Set(Yury_Bakhmutski); groups with modify permissions: Set()
+ 2022-10-13 12:57:58 INFO  Utils - Successfully started service 'sparkDriver' on port 60461.
+ 2022-10-13 12:57:59 INFO  SparkEnv - Registering MapOutputTracker
+ 2022-10-13 12:57:59 INFO  SparkEnv - Registering BlockManagerMaster
+ 2022-10-13 12:57:59 INFO  BlockManagerMasterEndpoint - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+ 2022-10-13 12:57:59 INFO  BlockManagerMasterEndpoint - BlockManagerMasterEndpoint up
+ 2022-10-13 12:57:59 INFO  SparkEnv - Registering BlockManagerMasterHeartbeat
+ 2022-10-13 12:57:59 INFO  DiskBlockManager - Created local directory at C:\Users\Yury_Bakhmutski\AppData\Local\Temp\blockmgr-454137b6-d010-431e-8c4f-1cf7650fc502
+ 2022-10-13 12:57:59 INFO  MemoryStore - MemoryStore started with capacity 4.0 GiB
+ 2022-10-13 12:57:59 INFO  SparkEnv - Registering OutputCommitCoordinator
+ 2022-10-13 12:57:59 INFO  Utils - Successfully started service 'SparkUI' on port 4040.
+ 2022-10-13 12:57:59 INFO  Executor - Starting executor ID driver on host EPBYMINW088C.minsk.epam.com
+ 2022-10-13 12:57:59 INFO  Executor - Starting executor with user classpath (userClassPathFirst = false): ''
+ 2022-10-13 12:57:59 INFO  Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 60480.
+ 2022-10-13 12:57:59 INFO  NettyBlockTransferService - Server created on EPBYMINW088C.minsk.epam.com:60480
+ 2022-10-13 12:57:59 INFO  BlockManager - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+ 2022-10-13 12:57:59 INFO  BlockManagerMaster - Registering BlockManager BlockManagerId(driver, EPBYMINW088C.minsk.epam.com, 60480, None)
+ 2022-10-13 12:57:59 INFO  BlockManagerMasterEndpoint - Registering block manager EPBYMINW088C.minsk.epam.com:60480 with 4.0 GiB RAM, BlockManagerId(driver, EPBYMINW088C.minsk.epam.com, 60480, None)
+ 2022-10-13 12:57:59 INFO  BlockManagerMaster - Registered BlockManager BlockManagerId(driver, EPBYMINW088C.minsk.epam.com, 60480, None)
+ 2022-10-13 12:57:59 INFO  BlockManager - Initialized BlockManager: BlockManagerId(driver, EPBYMINW088C.minsk.epam.com, 60480, None)
+ 2022-10-13 12:57:59 INFO  PointToRun$ - xml file path: file:/C:/_w/connection-factory/target/classes/input_file.xml
+ 2022-10-13 12:58:00 INFO  SharedState - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+ 2022-10-13 12:58:00 INFO  SharedState - Warehouse path is 'file:/C:/_w/connection-factory/spark-warehouse'.
+ 2022-10-13 12:58:01 INFO  MemoryStore - Block broadcast_0 stored as values in memory (estimated size 344.8 KiB, free 4.0 GiB)
+ 2022-10-13 12:58:01 INFO  MemoryStore - Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.6 KiB, free 4.0 GiB)
+ 2022-10-13 12:58:01 INFO  BlockManagerInfo - Added broadcast_0_piece0 in memory on EPBYMINW088C.minsk.epam.com:60480 (size: 32.6 KiB, free: 4.0 GiB)
+ 2022-10-13 12:58:01 INFO  SparkContext - Created broadcast 0 from newAPIHadoopFile at XmlFile.scala:52
+ 2022-10-13 12:58:01 INFO  FileInputFormat - Total input files to process : 1
+ 2022-10-13 12:58:01 INFO  SparkContext - Starting job: fold at InferSchema.scala:95
+ 2022-10-13 12:58:01 INFO  DAGScheduler - Got job 0 (fold at InferSchema.scala:95) with 1 output partitions
+ 2022-10-13 12:58:01 INFO  DAGScheduler - Final stage: ResultStage 0 (fold at InferSchema.scala:95)
+ 2022-10-13 12:58:01 INFO  DAGScheduler - Parents of final stage: List()
+ 2022-10-13 12:58:01 INFO  DAGScheduler - Missing parents: List()
+ 2022-10-13 12:58:01 INFO  DAGScheduler - Submitting ResultStage 0 (MapPartitionsRDD[2] at mapPartitions at InferSchema.scala:76), which has no missing parents
+ 2022-10-13 12:58:01 INFO  MemoryStore - Block broadcast_1 stored as values in memory (estimated size 6.4 KiB, free 4.0 GiB)
+ 2022-10-13 12:58:01 INFO  MemoryStore - Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 4.0 GiB)
+ 2022-10-13 12:58:01 INFO  BlockManagerInfo - Added broadcast_1_piece0 in memory on EPBYMINW088C.minsk.epam.com:60480 (size: 3.5 KiB, free: 4.0 GiB)
+ 2022-10-13 12:58:01 INFO  SparkContext - Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+ 2022-10-13 12:58:01 INFO  DAGScheduler - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[2] at mapPartitions at InferSchema.scala:76) (first 15 tasks are for partitions Vector(0))
+ 2022-10-13 12:58:01 INFO  TaskSchedulerImpl - Adding task set 0.0 with 1 tasks resource profile 0
+ 2022-10-13 12:58:01 INFO  TaskSetManager - Starting task 0.0 in stage 0.0 (TID 0) (EPBYMINW088C.minsk.epam.com, executor driver, partition 0, PROCESS_LOCAL, 4571 bytes) taskResourceAssignments Map()
+ 2022-10-13 12:58:01 INFO  Executor - Running task 0.0 in stage 0.0 (TID 0)
+ 2022-10-13 12:58:02 INFO  NewHadoopRDD - Input split: file:/C:/_w/connection-factory/target/classes/input_file.xml:0+550
+ 2022-10-13 12:58:02 INFO  Executor - Finished task 0.0 in stage 0.0 (TID 0). 2096 bytes result sent to driver
+ 2022-10-13 12:58:02 INFO  TaskSetManager - Finished task 0.0 in stage 0.0 (TID 0) in 331 ms on EPBYMINW088C.minsk.epam.com (executor driver) (1/1)
+ 2022-10-13 12:58:02 INFO  TaskSchedulerImpl - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+ 2022-10-13 12:58:02 INFO  DAGScheduler - ResultStage 0 (fold at InferSchema.scala:95) finished in 0.424 s
+ 2022-10-13 12:58:02 INFO  DAGScheduler - Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+ 2022-10-13 12:58:02 INFO  TaskSchedulerImpl - Killing all running tasks in stage 0: Stage finished
+ 2022-10-13 12:58:02 INFO  DAGScheduler - Job 0 finished: fold at InferSchema.scala:95, took 0.471992 s
+ 2022-10-13 12:58:02 INFO  BlockManagerInfo - Removed broadcast_0_piece0 on EPBYMINW088C.minsk.epam.com:60480 in memory (size: 32.6 KiB, free: 4.0 GiB)
+ 2022-10-13 12:58:02 INFO  BlockManagerInfo - Removed broadcast_1_piece0 on EPBYMINW088C.minsk.epam.com:60480 in memory (size: 3.5 KiB, free: 4.0 GiB)
+ 2022-10-13 12:58:04 INFO  MemoryStore - Block broadcast_2 stored as values in memory (estimated size 344.8 KiB, free 4.0 GiB)
+ 2022-10-13 12:58:04 INFO  MemoryStore - Block broadcast_2_piece0 stored as bytes in memory (estimated size 32.6 KiB, free 4.0 GiB)
+ 2022-10-13 12:58:04 INFO  BlockManagerInfo - Added broadcast_2_piece0 in memory on EPBYMINW088C.minsk.epam.com:60480 (size: 32.6 KiB, free: 4.0 GiB)
+ 2022-10-13 12:58:04 INFO  SparkContext - Created broadcast 2 from newAPIHadoopFile at XmlFile.scala:52
+ 2022-10-13 12:58:04 INFO  CodeGenerator - Code generated in 217.4595 ms
+ 2022-10-13 12:58:04 INFO  FileInputFormat - Total input files to process : 1
+ 2022-10-13 12:58:04 INFO  SparkContext - Starting job: show at PointToRun.scala:30
+ 2022-10-13 12:58:04 INFO  DAGScheduler - Got job 1 (show at PointToRun.scala:30) with 1 output partitions
+ 2022-10-13 12:58:04 INFO  DAGScheduler - Final stage: ResultStage 1 (show at PointToRun.scala:30)
+ 2022-10-13 12:58:04 INFO  DAGScheduler - Parents of final stage: List()
+ 2022-10-13 12:58:04 INFO  DAGScheduler - Missing parents: List()
+ 2022-10-13 12:58:04 INFO  DAGScheduler - Submitting ResultStage 1 (MapPartitionsRDD[8] at show at PointToRun.scala:30), which has no missing parents
+ 2022-10-13 12:58:04 INFO  MemoryStore - Block broadcast_3 stored as values in memory (estimated size 37.4 KiB, free 4.0 GiB)
+ 2022-10-13 12:58:04 INFO  MemoryStore - Block broadcast_3_piece0 stored as bytes in memory (estimated size 14.7 KiB, free 4.0 GiB)
+ 2022-10-13 12:58:04 INFO  BlockManagerInfo - Added broadcast_3_piece0 in memory on EPBYMINW088C.minsk.epam.com:60480 (size: 14.7 KiB, free: 4.0 GiB)
+ 2022-10-13 12:58:04 INFO  SparkContext - Created broadcast 3 from broadcast at DAGScheduler.scala:1513
+ 2022-10-13 12:58:04 INFO  DAGScheduler - Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at show at PointToRun.scala:30) (first 15 tasks are for partitions Vector(0))
+ 2022-10-13 12:58:04 INFO  TaskSchedulerImpl - Adding task set 1.0 with 1 tasks resource profile 0
+ 2022-10-13 12:58:04 INFO  TaskSetManager - Starting task 0.0 in stage 1.0 (TID 1) (EPBYMINW088C.minsk.epam.com, executor driver, partition 0, PROCESS_LOCAL, 4571 bytes) taskResourceAssignments Map()
+ 2022-10-13 12:58:04 INFO  Executor - Running task 0.0 in stage 1.0 (TID 1)
+ 2022-10-13 12:58:04 INFO  NewHadoopRDD - Input split: file:/C:/_w/connection-factory/target/classes/input_file.xml:0+550
+ 2022-10-13 12:58:05 INFO  CodeGenerator - Code generated in 84.78 ms
+ 2022-10-13 12:58:05 INFO  Executor - Finished task 0.0 in stage 1.0 (TID 1). 1644 bytes result sent to driver
+ 2022-10-13 12:58:05 INFO  TaskSetManager - Finished task 0.0 in stage 1.0 (TID 1) in 316 ms on EPBYMINW088C.minsk.epam.com (executor driver) (1/1)
+ 2022-10-13 12:58:05 INFO  TaskSchedulerImpl - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+ 2022-10-13 12:58:05 INFO  DAGScheduler - ResultStage 1 (show at PointToRun.scala:30) finished in 0.327 s
+ 2022-10-13 12:58:05 INFO  DAGScheduler - Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+ 2022-10-13 12:58:05 INFO  TaskSchedulerImpl - Killing all running tasks in stage 1: Stage finished
+ 2022-10-13 12:58:05 INFO  DAGScheduler - Job 1 finished: show at PointToRun.scala:30, took 0.330921 s
+ 2022-10-13 12:58:05 INFO  CodeGenerator - Code generated in 7.1547 ms
+ 2022-10-13 12:58:05 INFO  SparkContext - Invoking stop() from shutdown hook
+ 2022-10-13 12:58:05 INFO  SparkUI - Stopped Spark web UI at http://EPBYMINW088C.minsk.epam.com:4040
+ 2022-10-13 12:58:05 INFO  MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+ 2022-10-13 12:58:05 INFO  MemoryStore - MemoryStore cleared
+ 2022-10-13 12:58:05 INFO  BlockManager - BlockManager stopped
+ 2022-10-13 12:58:05 INFO  BlockManagerMaster - BlockManagerMaster stopped
+ 2022-10-13 12:58:05 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+ 2022-10-13 12:58:05 INFO  SparkContext - Successfully stopped SparkContext
+ 2022-10-13 12:58:05 INFO  ShutdownHookManager - Shutdown hook called
+ 2022-10-13 12:58:05 INFO  ShutdownHookManager - Deleting directory C:\Users\Yury_Bakhmutski\AppData\Local\Temp\spark-318f4d3a-a986-41d7-99b5-3a980fd36300
+ 
